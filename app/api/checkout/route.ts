@@ -73,8 +73,8 @@ export async function POST(req: Request) {
       payment_method_types: ['card', 'promptpay'],
       line_items: lineItems,
       mode: 'payment',
-      success_url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/my-library?payment=success`,
-      cancel_url: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/cart?canceled=true`,
+      success_url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://my-digital-store-psi.vercel.app'}/my-library?payment=success`,
+      cancel_url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://my-digital-store-psi.vercel.app'}/cart?canceled=true`,
       metadata: {
         userId: userId || '',
         orderId: orderData.id,

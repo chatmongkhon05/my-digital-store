@@ -81,7 +81,13 @@ export default function CartPage() {
       }
 
       if (data.url) {
-        window.location.href = data.url
+        // ใช้เทคนิคสร้างแท็ก a เสมือนแล้วสั่งคลิก เพื่อบังคับให้ WebView ใน App Inventor ดักจับ URL ของ Stripe ได้
+        const a = document.createElement('a')
+        a.href = data.url
+        a.target = '_self'
+        document.body.appendChild(a)
+        a.click()
+        document.body.removeChild(a)
       } else {
         throw new Error('ไม่พบลิงก์ชำระเงินจากระบบ')
       }

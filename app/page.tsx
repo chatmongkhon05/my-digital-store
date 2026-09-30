@@ -432,9 +432,9 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* FLOATING CART POPUP */}
+      {/* FLOATING CART POPUP (จัดกึ่งกลางและพอดีกับจอมือถือแนวตั้ง) */}
       {showCartPopup && (
-        <div className="fixed bottom-4 right-4 left-4 sm:left-auto z-50 max-w-sm w-full bg-white rounded-3xl border border-slate-200 shadow-2xl p-4 sm:p-5">
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-sm bg-white rounded-3xl border border-slate-200 shadow-2xl p-4 sm:p-5">
           <div className="flex items-center justify-between pb-2.5 border-b border-slate-100 mb-2.5">
             <div className="flex items-center gap-1.5">
               <span className="text-base">🛒</span>
@@ -448,13 +448,13 @@ export default function HomePage() {
             </button>
           </div>
 
-          <div className="max-h-44 overflow-y-auto space-y-2 pr-1 mb-3">
+          <div className="max-h-40 overflow-y-auto space-y-2 pr-1 mb-3">
             {cart.length === 0 ? (
               <p className="text-center text-slate-400 text-xs py-4">ไม่มีสินค้าในตะกร้า</p>
             ) : (
               cart.map((item) => (
-                <div key={item.id} className="flex items-center justify-between gap-2.5 bg-slate-50 p-2 rounded-xl border border-slate-100">
-                  <img src={item.image_url} alt={item.title} className="w-9 h-9 object-cover rounded-lg border border-slate-200 shrink-0" />
+                <div key={item.id} className="flex items-center justify-between gap-2 bg-slate-50 p-2 rounded-xl border border-slate-100">
+                  <img src={item.image_url} alt={item.title} className="w-8 h-8 object-cover rounded-lg border border-slate-200 shrink-0" />
                   
                   <div className="flex-1 min-w-0">
                     <p className="text-[11px] font-bold text-slate-900 line-clamp-1">{item.title}</p>

@@ -77,7 +77,8 @@ export default function MyLibraryPage() {
 
       if (error) throw error
       if (data?.signedUrl) {
-        window.open(data.signedUrl, '_blank')
+        // ใช้ window.location.href เพื่อให้ WebView ใน MIT App Inventor ดักจับ URL ที่มีคำว่า storage ได้
+        window.location.href = data.signedUrl
       }
     } catch (error: any) {
       alert(`เกิดข้อผิดพลาดในการดาวน์โหลด: ${error.message}`)

@@ -432,9 +432,9 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* FLOATING CART POPUP (มือถืออยู่กลางจอ, คอมพิวเตอร์อยู่ขวาล่าง) */}
+      {/* FLOATING CART POPUP (มือถืออยู่กลางจอปรับขนาดไม่ให้ล้น, คอมพิวเตอร์อยู่ขวาล่าง) */}
       {showCartPopup && (
-        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:bottom-6 sm:right-6 z-50 w-[92%] max-w-sm bg-white rounded-3xl border border-slate-200 shadow-2xl p-4 sm:p-5">
+        <div className="fixed bottom-2 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:bottom-6 sm:right-6 z-50 w-[92%] max-w-sm bg-white rounded-3xl border border-slate-200 shadow-2xl p-4 sm:p-5">
           <div className="flex items-center justify-between pb-2.5 border-b border-slate-100 mb-2.5">
             <div className="flex items-center gap-1.5">
               <span className="text-base">🛒</span>
